@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            padding-top: 100px;
+            font-weight: 700;
+        }
+
+        #text{
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #box-flex {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 80%;
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 12%;
+            height: 20vh;
+            background-color: rgb(35, 130, 255);
+            margin-right: 40px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="text">Welcome!</div>
+        <div id="box-flex">
+            <!-- Have the /play route render a template with 3 blue boxes -->
+            {% if not num %}
+            {% for i in range(3) %}
+            <div class="box"></div>
+            {% endfor %}
+
+            <!-- Have the /play/<x>/<color> route render a template with x number of boxes the color of the provided value -->
+            {% elif num > 0 and color|length > 0 %}
+            {% for i in range(num) %}
+            <div class="box" style="background-color: {{color}};"></div>
+            {% endfor %}
+
+            <!-- Have the /play/<x> route render a template with x number of blue boxes -->
+            {% elif num > 0 %}
+            {% for i in range(num) %}
+            <div class="box"></div>
+            {% endfor %}
+
+
+            {% endif %}
+        </div>
+
+
+    </div>
+</body>
+
+</html>

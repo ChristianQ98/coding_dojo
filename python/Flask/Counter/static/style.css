@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main{
+    width: 100%;
+}

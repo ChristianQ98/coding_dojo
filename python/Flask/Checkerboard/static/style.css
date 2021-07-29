@@ -1,0 +1,17 @@
+.black-box{
+    background-color: black;
+}
+
+.red-box{
+    background-color: red;
+}
+
+table td{
+    height: 50px;
+    width: 50px;
+}
+
+table{
+    margin: 0 auto;
+    margin-top: 10%;
+}

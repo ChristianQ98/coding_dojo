@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Checkerboard</title>
+    <style>
+        .black-box {
+            background-color: black;
+        }
+
+        .red-box {
+            background-color: red;
+        }
+
+        table td {
+            height: 50px;
+            width: 50px;
+        }
+
+        table {
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Have the root route render a template with a checkerboard on it -->
+        {% if not row_num %}
+        {% for i in range(4): %}
+        <tr>
+            {% for j in range(4): %}
+            <td class="red-box"></td>
+            <td class="black-box"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(4): %}
+            <td class="black-box"></td>
+            <td class="red-box"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+        <!-- Have another route accept 4 parameters (i.e. "/<x>/<y>/<color1>/<color2>") and render a checkerboard with x rows and y columns, 
+                with alternating colors, color1 and color2 -->
+        {% elif row_num > 0 and col_num > 0 and color1|length > 0 and color2|length > 0 %}
+        {% for i in range(col_num//2): %}
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="red-box" style="background-color: {{color1}};"></td>
+            <td class="black-box" style="background-color: {{color2}};"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="black-box" style="background-color: {{color2}};"></td>
+            <td class="red-box" style="background-color: {{color1}};"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+        <!-- Have another route accept 2 parameters (i.e. "/<x>/<y>") and render a checkerboard with x rows and y columns, with alternating color -->
+        {% elif row_num > 0 and col_num > 0 %}
+        {% for i in range(col_num//2): %}
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="red-box"></td>
+            <td class="black-box"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="black-box"></td>
+            <td class="red-box"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+        <!-- Have another route accept a single parameter (i.e. "/<x>") and render a checkerboard with x many rows, with alternating colors -->
+        {% elif row_num > 0 %}
+        {% for i in range(8//2): %}
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="red-box"></td>
+            <td class="black-box"></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(row_num//2): %}
+            <td class="black-box"></td>
+            <td class="red-box"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+
+        {% endif %}
+    </table>
+</body>
+
+</html>
