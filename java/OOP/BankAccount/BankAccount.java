@@ -62,7 +62,7 @@ public class BankAccount {
 	
 	
 	public String totalInBankAccount() {
-		return "Your total funds across your Checking and Savings account is: $" + String.format("%.2f", (checkingBalance + savingsBalance));
+		return "Your total funds across your Checking and Savings account is: $" + String.format("%.2f", (this.checkingBalance + this.savingsBalance));
 	}
 	
 	// GETTERS
