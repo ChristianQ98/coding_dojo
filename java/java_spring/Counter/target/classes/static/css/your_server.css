@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin-left: 50%;
+	margin-top: 15%;
+}
+
+a {
+	margin-left: 50%;
+}

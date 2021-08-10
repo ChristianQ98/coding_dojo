@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#visits,
+#test {
+	margin-top: 15%;
+	margin-left: 45%;
+}
+
+#counter_two, 
+.btn {
+	margin-left: 45%;
+	margin-top: 1%;
+}
