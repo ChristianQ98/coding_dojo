@@ -1,0 +1,34 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+    outline: 3px solid black;
+    width: 50%;
+    margin-top: 8%;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-horizontal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+#submit {
+    width: 20%;
+    display: block;
+    margin-left: 80%;
+    margin-top: 2%;
+}

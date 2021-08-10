@@ -1,0 +1,39 @@
+@charset "ISO-8859-1";
+
+* {
+    margin-left: 30px;
+}
+
+.container {
+    outline: 3px solid black;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 8%;
+    height: 70vh;
+    padding-top: 20px;
+}
+
+
+h1 {
+    text-decoration: underline;
+}
+
+table {
+    font-size: 30px;
+    width: 1000px;
+}
+
+
+
+#go_back {
+    width: 20%;
+    display: block;
+    margin-left: 78%;
+    margin-top: 38%;
+}
+
+#facts {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20%;
+}
