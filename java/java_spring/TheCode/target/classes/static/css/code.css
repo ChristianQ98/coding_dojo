@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 45%;
+	height: 70vh;
+}
+
+ul {
+	margin-top: 40%;
+	margin-left: 40%;
+	font-size: 1.4rem;
+}
