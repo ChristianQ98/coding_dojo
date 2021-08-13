@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 80%;
+	margin-top: 1%;
+}
+
+tr {
+	border: 2px solid black;
+}
+
+td, th {
+	border: 2px solid black;
+	text-align: center;
+}
+
+form {
+	margin: 0 auto;
+	margin-top: 4%;
+	width: 100%;
+	text-align: center;
+	margin-left: 15%;
+}
+
+.row {
+	align-items: center !important;
+}
+
+input {
+	width: 40%;
+}
+
+#submit {
+	margin-left: 9%;
+}
+
+a {
+	color: blue;
+}
