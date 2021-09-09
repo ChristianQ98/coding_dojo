@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+.main {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#btn {
+    margin-top: 2%;
+}
+
+ol {
+    list-style-position: inside;
+    line-height: 160%;
+    margin-right: 5%;
+}
+
+li {
+    text-transform: capitalize;
+}
