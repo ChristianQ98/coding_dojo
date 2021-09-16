@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: auto;
+    width: 30%;
+    font-size: 1.3rem;
+    border: 2px solid black;
+    margin-top: 5%;
+    background-color: skyblue;
+}
+
+h1 {
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+}
+
+.hide {
+    border-color: white !important;
+}
